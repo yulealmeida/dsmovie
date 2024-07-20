@@ -1,6 +1,9 @@
+import Pagination from "components/Pagination";
+
 function Listing(){
     return(
-        <h1>Listagens</h1>
+        <Pagination></Pagination>
+        
     )
 }
 
