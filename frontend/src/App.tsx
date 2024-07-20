@@ -3,7 +3,7 @@
 
 function App() {
   return (
-    <h1>Pagina Principal</h1>
+    <h1>Oi mundo</h1>
   );
 }
 
