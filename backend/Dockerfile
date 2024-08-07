@@ -1,4 +1,4 @@
-# Use uma imagem base do Maven para compilar a aplicação
+# Use uma imagem base do Maven com JDK 17 para compilar a aplicação
 FROM maven:3.8.4-openjdk-17 AS build
 
 # Defina o diretório de trabalho dentro do contêiner
@@ -11,8 +11,8 @@ COPY src ./src
 # Compile o projeto e crie um jar
 RUN mvn clean package
 
-# Use uma imagem mais leve para rodar a aplicação
-FROM openjdk:17-jre-slim
+# Use uma imagem mais leve com JDK 17 para rodar a aplicação
+FROM openjdk:17-jdk-slim
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
